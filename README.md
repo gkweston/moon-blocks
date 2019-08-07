@@ -40,4 +40,7 @@ stage 2 will be completed and AI implemented to complete it. So on, until stages
 stage can be played like a mini-game by a user, or the can be run together for a rudimentary lunar landing simulator.
 
 Upon completion of stage 3 the specific parameters of the Unity Engine to be set so a user can run the stage in its entirety
-will be layed out here, or it will be published as a stand-alone application.
+will be layed out here, or it will be published as a stand-alone application. (08/07/2019)
+
+Controller2D script, (collisions etc.) is derived from work done by Sebastian Lague (https://github.com/SebLague/2DPlatformer-Tutorial)
+
