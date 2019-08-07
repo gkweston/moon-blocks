@@ -39,7 +39,7 @@ complete, various artificial intellegence scripts will be written and tested to 
 stage 2 will be completed and AI implemented to complete it. So on, until stages 1-3 can be automated & optimized. Each
 stage can be played like a mini-game by a user, or the can be run together for a rudimentary lunar landing simulator.
 
-Upon completion of stage 3 the specific parameters of the Unity Engine to be set so a user can run the stage in its entirety
+Upon completion of stage 3, specific parameters required w/i the Unity Engine so a user can run the stage in its entirety
 will be layed out here, or it will be published as a stand-alone application. (08/07/2019)
 
 Controller2D script, (collisions etc.) is derived from work done by Sebastian Lague (https://github.com/SebLague/2DPlatformer-Tutorial)
