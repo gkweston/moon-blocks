@@ -2,7 +2,7 @@
 A simple 2D moon landing sim for learning C#, APIs and implementing automation
 
 On the 50th anniversary of the Apollo 11 moon landings I started planning a 2D lunar lander as an academic exercise in
-developing APIs and optimizing processes via various artificial intelligence methods. The final project will be broken into
+developing APIs and optimizing processes via various automation & AI methods. The final project will be broken into
 three stages:
 
 1. Take-off & pre-orbital maneuvers:
