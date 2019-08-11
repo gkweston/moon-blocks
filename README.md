@@ -5,7 +5,7 @@ On the 50th anniversary of the Apollo 11 moon landings I started planning a 2D l
 developing APIs and optimizing processes via various automation & AI methods. The final project will be broken into
 three stages, all of which utilize the Unity Engine:
 
-1. Take-off & pre-orbital maneuvers:
+1. Take-off & pre-orbital maneuvers (planned):
 
     a. Fuel/weight ratio
     
@@ -13,7 +13,7 @@ three stages, all of which utilize the Unity Engine:
     
     c. Final stage seperation into command/service module (CM) & lunar module (LM)
     
-2. Navigation and lunar orbit:
+2. Navigation and lunar orbit (planned):
 
     a. Translunar injection
     
@@ -21,7 +21,7 @@ three stages, all of which utilize the Unity Engine:
     
     c. Lunar orbital insertion
     
-3. Lunar landing & escape:
+3. Lunar landing & escape (in progress):
 
     a. Undocking LM from CM
     
