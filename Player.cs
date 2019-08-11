@@ -1,15 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour
 {
-
     
     private float _appliedGravity;
     public float gravity = -1.6f;
@@ -38,11 +33,6 @@ public class Player : MonoBehaviour
         _downwardThrust = GetComponent<ParticleSystem>();
         _sustainedThrust = (_massBasedThrust / (_ascentModuleMass)) * Time.deltaTime;    // sans propellant mass
         _appliedGravity = gravity * Time.deltaTime;
-        var lowerShape = _downwardThrust.shape;
-        var lowerThrustNozzle = lowerShape.sphericalDirectionAmount;
-        lowerThrustNozzle = 1;
-
-
     }
 
     public void Update()
@@ -52,16 +42,12 @@ public class Player : MonoBehaviour
 
         
         var lowerEmission = _downwardThrust.emission;
-        var lowerShape = _downwardThrust.shape;
-        var lowerThrustNozzle = lowerShape.sphericalDirectionAmount;
         var LHSEmission = LHSParticleSystem.emission;
         var LHSSpeed = LHSParticleSystem.main.startSpeed;
         var RHSEmission = RHSParticleSystem.emission;
         var RHSSpeed = RHSParticleSystem.main.startSpeed;
         var UpperEmission = UpperParticleSystem.emission;
         var UpperSpeed = UpperParticleSystem.main.startSpeed;
-
-        lowerThrustNozzle = 1;
         
         _downwardThrust.Stop();
         LHSParticleSystem.Stop();
@@ -70,41 +56,17 @@ public class Player : MonoBehaviour
 
         Vector3 landerPosition = transform.position;
         
+        //  if landerPosition < 10 particle emission startlifetime = 5
+        _downwardThrust.startLifetime = landerPosition.y < 20 ? 5 : 0.4f;
+        //
         
         if (controller.collisions.below || controller.collisions.above)
         {
             velocity.x = 0;
             velocity.y = 0;
         }
-
-        if (Input.GetKey(KeyCode.Keypad3))
-        {
-            lowerThrustNozzle = 0.02f;
-        }
         
-        if (Input.GetKey(KeyCode.Keypad2))
-        {
-            lowerThrustNozzle = 0.05f;
-        }
-        
-        if (Input.GetKey(KeyCode.Keypad1))
-        {
-            lowerThrustNozzle = 0.07f;
-        }
-        
-        if (Input.GetKey(KeyCode.Keypad0))
-        {
-            lowerThrustNozzle = 0.1f;
-        }
-        
-        if (Input.GetKey(KeyCode.Space))
-        {
-            _powerThrustMode = true;
-        }
-        else
-        {
-            _powerThrustMode = false;
-        }
+        _powerThrustMode = Input.GetKey(KeyCode.Space);
         
         if (Input.GetKeyDown((KeyCode.RightShift)))    
         {
@@ -194,16 +156,5 @@ public class Player : MonoBehaviour
         mainCamera.transform.position = landerPosition;
         mainCamera.transform.Translate(0, 0, -5);
         
-        print("x velocity:" + velocity.x);
-        print("y velocity:" + velocity.y);
-        print("Applied Thrust is at:" + _sustainedThrust);
-        if (!((velocity.y / 9.8f) >= 10) && !(velocity.y / 9.8f <= -10)) // Update for true acceleration derived g's
-        {
-            print("Maintained G's:" + velocity.y / 9.8f);
-        }
-        else
-        {
-            print("Warning, Extreme g-forces..." + velocity.y / 9.8f);
-        }
     }
 }
