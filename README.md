@@ -5,7 +5,7 @@ On the 50th anniversary of the Apollo 11 moon landings I started planning a 2D l
 developing APIs and optimizing processes via various automation & AI methods. The final project will be broken into
 three stages, all of which utilize the Unity Engine:
 
-1. Take-off & pre-orbital maneuvers (planned):
+__1. Take-off & pre-orbital maneuvers (planned):__
 
     a. Fuel/weight ratio
     
@@ -13,7 +13,7 @@ three stages, all of which utilize the Unity Engine:
     
     c. Final stage seperation into command/service module (CM) & lunar module (LM)
     
-2. Navigation and lunar orbit (planned):
+__2. Navigation and lunar orbit (planned):__
 
     a. Translunar injection
     
@@ -21,7 +21,7 @@ three stages, all of which utilize the Unity Engine:
     
     c. Lunar orbital insertion
     
-3. Lunar landing & escape (in progress):
+__3. Lunar landing & escape (in progress):__
 
     a. Undocking LM from CM
     
@@ -41,7 +41,7 @@ stage can be played like simple a mini-game by a user, or run together for a rud
 
 Without publishing the simulator as a standalone application, various parameters must be set in Unity in order to run the
 program. Once stage 3 is sufficiently established these parameters will be published, along with a standalone application.
-(Updated 08/10/2019)
+(Updated comments 08/23/2019)
 
 Controller2D script, (collisions etc.) is derived from work done by Sebastian Lague 
 (https://github.com/SebLague/2DPlatformer-Tutorial)
