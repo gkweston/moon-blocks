@@ -41,7 +41,10 @@ stage can be played like simple a mini-game by a user, or run together for a rud
 
 Without publishing the simulator as a standalone application, various parameters must be set in Unity in order to run the
 program. Once stage 3 is sufficiently established these parameters will be published, along with a standalone application.
-(Updated comments 08/23/2019)
+
+
+#### NOTE: 
+*data-soccer has absorbed most of my leisure time, part of this is because I am learning things through that project that will later be applied here. But also that data-soccer is a significant workload, while also being more limited in scope than moon-blocks. (09/01/2019)*
 
 Controller2D script, is derived from [Sebastian Lague's identically named script found here.](https://github.com/SebLague/2DPlatformer-Tutorial)
 
